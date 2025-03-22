@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="it">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!--STYLESHEET-->
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <title>TRIS ONLINE</title>
+  </head>
+  <body>
+    <div class="box" id="intestazione">
+      <span id="titolo">TRIS ONLINE</span>
+      <span id="sottotitolo">Gioca,impara e divertiti.</span>
+    </div>
+
+    <div class="box" id="punteggio">0 - 0</div>
+
+    <table id="tris">
+      <tr class="riga">
+        <td class="cella" tabindex="0" onclick="trisEngine(0,0)"></td>
+        <td class="cella" tabindex="0" onclick="trisEngine(0,1)"></td>
+        <td class="cella" tabindex="0" onclick="trisEngine(0,2)"></td>
+      </tr>
+      <tr class="riga">
+        <td class="cella" tabindex="0" onclick="trisEngine(1,0)"></td>
+        <td class="cella" tabindex="0" onclick="trisEngine(1,1)"></td>
+        <td class="cella" tabindex="0" onclick="trisEngine(1,2)"></td>
+      </tr>
+      <tr class="riga">
+        <td class="cella" tabindex="0" onclick="trisEngine(2,0)"></td>
+        <td class="cella" tabindex="0" onclick="trisEngine(2,1)"></td>
+        <td class="cella" tabindex="0" onclick="trisEngine(2,2)"></td>
+      </tr>
+    </table>
+
+    <div class="box" id="vincita"></div>
+    <div class="bottone">
+      <button id="btn" onclick="reset()">NUOVA PARTITA</button>
+    </div>
+
+    <!--SCRIPT-->
+    <script src="assets/js/script.js"></script>
+
+    <footer>
+      &copy; 2025, Developed by: Mattia Lombardi<br />
+      MaggWeb s.a.s -
+      <em>For more, please contact: maggweb.adv@gmail.com</em>
+    </footer>
+  </body>
+</html>

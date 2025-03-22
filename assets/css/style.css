@@ -1,0 +1,157 @@
+/*import font*/
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+
+:root {
+  /*colors*/
+  --seasalt: #f8f9faff;
+  --antiflash-white: #e9ecefff;
+  --platinum: #dee2e6ff;
+  --french-gray: #ced4daff;
+  --french-gray-2: #adb5bdff;
+  --slate-gray: #6c757dff;
+  --outer-space: #495057ff;
+  --onyx: #343a40ff;
+  --eerie-black: #212529ff;
+  /*font*/
+  --text-font: "Montserrat", sans-serif;
+
+  /*font setting*/
+  --tile-size: 21px;
+  --text-size: 11px;
+  --text-weigth: 200;
+  --title-weigth: 500;
+}
+
+/*settings generali*/
+html {
+  scroll-behavior: smooth;
+}
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+body {
+  background-color: var(--eerie-black);
+  color: var(--seasalt);
+  margin: 0;
+  border: none;
+  padding: 0;
+  overflow-x: hidden;
+}
+* {
+  font-family: var(--text-font);
+  font-weight: var(--text-weigth);
+}
+
+/*setting generale box*/
+.box {
+  width: 100%;
+  text-align: center;
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+}
+#intestazione {
+  margin-top: 5rem;
+}
+#intestazione #titolo {
+  font-size: 31px;
+  font-weight: var(--title-weigth);
+}
+#intestazione #sottotitolo {
+  font-style: italic;
+}
+
+/*setting tabella*/
+table {
+  position: relative;
+  width: 20rem;
+  margin: 2rem auto; /* Centra la tabella */
+  border: 1px solid var(--antiflash-white);
+  border-collapse: collapse;
+}
+table tr td {
+  width: 33%; /* Distribuisce uniformemente la larghezza tra le celle */
+  height: 6rem;
+  border: 1px solid var(--antiflash-white);
+  text-align: center;
+  font-size: 31px;
+}
+
+/*hover*/
+table tr td:hover {
+  cursor: pointer;
+  background-color: var(--onyx);
+  transition: ease-in-out 0.2s;
+}
+table tr td:not(:hover) {
+  background-color: var(--eerie-black);
+  transition: ease-in-out 0.2s;
+}
+
+/*focus*/
+td:focus {
+  background-color: var(--seasalt);
+  outline: none; /* Rimuove il bordo di focus */
+}
+
+/* Disabilita sottolineatura su selezione del testo */
+::selection {
+  background-color: transparent;
+  color: inherit;
+  text-decoration: none;
+}
+
+/* Rimuove la sottolineatura dai link nelle celle */
+table tr td {
+  text-decoration: none;
+}
+
+/*tasto reset*/
+.bottone {
+  display: flex;
+}
+#btn {
+  padding: 1rem;
+  font-weight: 400;
+  background-color: transparent;
+  border: 0.5px solid var(--antiflash-white);
+  color: var(--antiflash-white);
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 2rem;
+  visibility: hidden;
+}
+
+#btn:hover {
+  cursor: pointer;
+  background-color: var(--antiflash-white);
+  color: var(--eerie-black);
+  transition: ease-in-out 0.2s;
+}
+#btn:focus {
+  background-color: #212529ff;
+  transition: ease-in 0.3s;
+}
+#btn:not:focus {
+  background-color: var(--antiflash-white);
+  color: var(--eerie-black);
+  transition: ease-in-out 0.3s;
+}
+#btn:not(:hover) {
+  background-color: transparent;
+  color: var(--antiflash-white);
+  transition: ease-in-out 0.2s;
+}
+
+footer {
+  width: 100%;
+  text-align: center;
+  font-size: 13px;
+  margin-top: auto; /* Spinge il footer in fondo */
+  padding: 10px 0;
+}
